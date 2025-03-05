@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} Home {% endblock title %}
+
+
+{% block style %}
+<link rel="shortcut icon" href="{% static 'svg/twitter.svg' %}" type="image/x-icon">
+<link rel="stylesheet" href="{% static 'home/css/reset.css' %}" />
+<link rel="stylesheet" href="{% static 'components/css/navbar.css' %}" />
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+<link rel="stylesheet" href="{% static 'components/css/footer.css' %}" />
+{% endblock style %}
+
+
+{% block header %}
+<header>
+  {% include 'components/navbar.html' %}
+</header>
+{% endblock header %}
+
+
+{% block content %}
+<main>
+  <div class="box-content">
+    <h1>Twitter Clone Backend API</h1>
+    <div class="btn">
+      <a href="{% url 'docs-api' %}">API Documentation</a>
+    </div>
+    <img src="https://mack-twitter.pages.dev/static/svg/twitter.svg" alt="logo twitter" class="logo-twitter" />
+    <div class="details">
+      <h3>✨ Implemented Features</h3>
+      <ul>
+          <li>🔐 JWT Authentication</li>
+          <li>🌐 Social Authentication: Google Login</li>
+          <li>✍️ CRUD Tweets</li>
+          <li>🔁 CRUD Retweets</li>
+          <li>👍 Like Tweets and Retweets</li>
+          <li>📑 Bookmarks</li>
+          <li>👤 User Profiles</li>
+          <li>➕ Follow and Unfollow Users</li>
+          <li>🔔 Real-time Notifications</li>
+          <li>💬 Real-time Chat: Chat functionality using WebSockets</li>
+          <li>📱 Responsive Design</li>
+          <li>📲 Progressive Web App (PWA)</li>
+      </ul>
+
+      <h3>🔧 Technologies Used</h3>
+
+      <h4>Backend:</h4>
+      <ul>
+          <li>Django</li>
+          <li>Django REST framework</li>
+          <li>Django-Channel</li>
+          
+      </ul>
+
+      <h4>Database:</h4>
+      <ul>
+          <li>PostgreSQL</li>
+          <li>Supabase</li>
+          <li>Redis</li>
+      </ul>
+          
+      </ul>
+    </div>
+  </div>
+</main>
+{% endblock content %}
+
+
+{% block footer %}
+<footer>
+  {% include 'components/footer.html' %}
+</footer>
+{% endblock footer %}
+
+
+{% block js %} {% endblock js %}

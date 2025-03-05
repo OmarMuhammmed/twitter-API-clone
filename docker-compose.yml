@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      - POSTGRES_DB=twitter_clone
+      - POSTGRES_USER=twitter_user
+      - POSTGRES_PASSWORD=twitter_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clone-twitter-backend-api
+    container_name: api
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+      - redis
+
+  redis:
+    image: redis:5
+    container_name: redis
+    ports:
+      - 6379:6379
+
+volumes:
+  postgres_data:
