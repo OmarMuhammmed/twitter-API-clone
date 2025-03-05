@@ -45,7 +45,7 @@ This project is a backend implementation of a Twitter clone using Django, Django
 1. Clone the repository:
 
 ```sh
-[git clone https://github.com/](https://github.com/OmarMuhammmed/twitter-API-clone.git)
+git clone https://github.com/](https://github.com/OmarMuhammmed/twitter-API-clone.git
 ```
 ```sh
 cd clone-twitter-backend
