@@ -7,7 +7,7 @@ User = get_user_model()
 class UserModelTests(TestCase):
     @classmethod
     def setUpTestData(cls):
-        # Mettre en place des objets non modifiés utilisés par toutes les méthodes de test
+       
         User.objects.create(
             first_name="Mack", last_name="AS", email="mack@gmail.com", password="12345"
         )

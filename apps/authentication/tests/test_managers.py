@@ -14,8 +14,7 @@ class UsersManagersTests(TestCase):
         self.assertFalse(user.is_staff)
         self.assertFalse(user.is_superuser)
         try:
-            # le nom d'utilisateur est Vite pour l'option AbstractUser
-            # le nom d'utilisateur n'existe pas pour l'option AbstractBaseUser
+           
             self.assertIsNone(user.username)
         except AttributeError:
             pass

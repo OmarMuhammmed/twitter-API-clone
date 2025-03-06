@@ -109,12 +109,6 @@ class ActivationSerializer(serializers.Serializer):
     uidb64 = serializers.CharField(write_only=True)
     token = serializers.CharField(write_only=True)
 
-    class Meta:
-        fields = [
-            "uidb64",
-            "token",
-        ]
-
     def validate(self, attrs):
         uidb64 = attrs.get("uidb64")
         token = attrs.get("token")
