@@ -8,7 +8,7 @@ from apps.utils.response import response_messages
 
 
 User = get_user_model()
-res = response_messages('fr')
+res = response_messages( 'en')
 
 
 class NotificationSerializer(serializers.ModelSerializer):

@@ -12,7 +12,7 @@ from apps.utils.response import error_messages, response_messages
 
 
 User = get_user_model()
-res = response_messages('fr')
+res = response_messages( 'en')
 
 
 class LikeCommentSerializer(serializers.ModelSerializer):
